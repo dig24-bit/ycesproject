@@ -74,7 +74,8 @@ The application is created using Python, and the code is stored in the version c
 
 GitHub URL:[ ycesproject-devops/app.py at main · ycesproject/ycesproject-devops (github.com) ](https://github.com/ycesproject/ycesproject-devops/blob/main/app.py)Source code: ![ref1]
 
-![](docs/images/004.jpeg)**Step 2: Create the Virtual machines in Azure for the Jenkins server and Docker swarm.** 
+![](docs/images/004.jpeg)
+**Step 2: Create the Virtual machines in Azure for the Jenkins server and Docker swarm.** 
 
 Two virtual machines are created in the Azure cloud platform named Jenkins master server and Docker. The Jenkins server is used for automation purposes, and Docker is used for application deployment. 
 
