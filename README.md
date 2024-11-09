@@ -39,10 +39,10 @@ Screenshots:
 
 Prepared by: 
 
-`Athul Sukumaran (C0880215)`  
+`Athul Sukumaran (C0880215)`
 `Om Vikas Kadam`  
-`Punam Pramod Jathar`  
-`Sonali Madhukar Lokare`  
+`Punam Pramod Jathar` 
+`Sonali Madhukar Lokare`
 `Vaishnavi Vitthal Dube`  
 `Digvijay Laxman Vitkar`  ![ref1]
 
