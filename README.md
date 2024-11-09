@@ -39,12 +39,12 @@ Screenshots:
 
 Prepared by: 
 
-`Athul Sukumaran (C0880215)`
-`Om Vikas Kadam`  
-`Punam Pramod Jathar` 
-`Sonali Madhukar Lokare`
-`Vaishnavi Vitthal Dube`  
-`Digvijay Laxman Vitkar`  ![ref1]
+1.  Digvijay Laxman Vitkar
+1.  Om Vikas Kadam
+1.  Punam Pramod Jathar
+1.  Sonali Madhukar Lokare
+1.  Vaishnavi Vitthal Dube
+![ref1]
 
 **ABSTRACT** 
 
