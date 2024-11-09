@@ -23,7 +23,7 @@ Note : Codes are documented to make it easy to understand
 
 Screenshots:
 
-![image](docs/images/1st-url-qr-genarator.png)
+![image](docs/images/1st-url-qr-genarator.png) 
 ![image](docs/images/2nd-choose-foreground-blue.png)
 ![image](docs/images/3rd-choose-foreground-white.png)
 ![image](docs/images/4th-qr-code.png)
@@ -37,18 +37,14 @@ Screenshots:
 
 **TERM PROJECT** 
 
-2023W CBD 2244 1 [B107] DevOps Fundamentals for Canadian Enterprises 
-
-INSTRUCTOR: Mohammad Salim Course: DOCT 
-
 Prepared by: 
 
-`Athul Sukumaran (C0880215)`
-`Om Vikas Kadam`
-`Punam Pramod Jathar`
-`Sonali Madhukar Lokare`
-`Vaishnavi Vitthal Dube`
-`Digvijay Laxman Vitkar`
+`Athul Sukumaran (C0880215)`  ![ref1]
+`Om Vikas Kadam`  ![ref1]
+`Punam Pramod Jathar`  ![ref1]
+`Sonali Madhukar Lokare`  ![ref1]
+`Vaishnavi Vitthal Dube`  ![ref1]
+`Digvijay Laxman Vitkar`  ![ref1]
 
 **ABSTRACT** 
 
