@@ -236,7 +236,7 @@ In conclusion, the Continuous Integration/Continuous Deployment (CI/CD) approach
 2. *Table Of Contents · Nagios Core Documentation*. (n.d.). [https://as-sets.nagios.com/downloads/nagioscore/docs/images/nagioscore/4/en/toc.html ](https://as-sets.nagios.com/downloads/nagioscore/docs/images/nagioscore/4/en/toc.html)
 2. *Getting Started with the Agent*. (n.d.). Datadog Infrastructure and Application Monitoring. [https://docs.datadoghq.com/getting_started/agent/ ](https://docs.datadoghq.com/getting_started/agent/)
 2. Trapani, K. (2023). How to Integrate Jenkins with GitHub. *Cprime*. [https://www.cprime.com/resources/blog/how-to-integrate-jenkins-github/ ](https://www.cprime.com/resources/blog/how-to-integrate-jenkins-github/)![ref1]
-**©2023 LAMBTON COLLEGE in TORONTO** 
+
 
 [ref1]: docs/images/002.png
 
