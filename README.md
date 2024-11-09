@@ -43,7 +43,12 @@ INSTRUCTOR: Mohammad Salim Course: DOCT
 
 Prepared by: 
 
-`    `Athul Sukumaran (C0880215) ![ref1]
+`Athul Sukumaran (C0880215)`
+`Om Vikas Kadam`
+`Punam Pramod Jathar`
+`Sonali Madhukar Lokare`
+`Vaishnavi Vitthal Dube`
+`Digvijay Laxman Vitkar`
 
 **ABSTRACT** 
 
