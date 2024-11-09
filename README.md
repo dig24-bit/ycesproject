@@ -1,4 +1,4 @@
-# Yces Project
+# YCES Project
 
 ## Python MS Documenation - QR code generator
 
