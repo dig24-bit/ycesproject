@@ -5,7 +5,7 @@
 Python Webapp for Creating QR codes
 
 Uses: Python,pywebio,Falsk,qrcode module
-App Deployed on : Heroku  
+App Deployed on : Laptop
 
 
 About the webapp
@@ -46,6 +46,7 @@ Prepared by:
 1.  Punam Pramod Jathar
 1.  Sonali Madhukar Lokare
 1.  Vaishnavi Vitthal Dube
+
 ![ref1]
 
 **ABSTRACT** 
