@@ -8,4 +8,4 @@
 
 
       - name: push new image
-        command: sudo docker push 1365890/devops_projects
+        command: sudo docker push 1365890/ycesproject
