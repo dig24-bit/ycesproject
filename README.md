@@ -75,7 +75,7 @@ The application is created using Python, and the code is stored in the version c
 - It generates two types of codes, **QR codes and Bar codes.** 
 - It also allows users to download the generated codes 
 
-GitHub URL:[ ycesproject-devops/app.py at main · ycesproject/source-code/dockerycesproject-devops (github.com) ](https://github.com/ycesproject/source-code/dockerycesproject-devops/blob/main/app.py)Source code: ![ref1]
+GitHub URL:[ ycesproject/source-code/docker/app.py at main · ycesproject/source-code/docker (github.com) ](https://github.com/ycesproject/source-code/docker/app.py)Source code: ![ref1]
 
 ![](docs/images/004.jpeg)
 **Step 2: Create the Virtual machines in Azure for the Jenkins server and Docker swarm.** 
