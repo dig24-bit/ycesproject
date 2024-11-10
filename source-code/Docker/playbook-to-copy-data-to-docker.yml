@@ -5,7 +5,7 @@
   tasks:
       - name: Testing the source code and move the code to Docker node
         synchronize:
-          src: /var/lib/jenkins/workspace/YcesProject/
-          dest: /home/jenkins/Devops-project/
+          src: /var/lib/jenkins/workspace/ycesproject/source-code/docker
+          dest: /home/jenkins/ycesproject/source-code/docker
           delete: yes
           
