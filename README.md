@@ -1,5 +1,7 @@
 # YCES Project
 
+![](docs/images/001.png)
+
 ## Python MS Documenation - QR code generator
 
 Python Webapp for Creating QR codes
@@ -29,11 +31,6 @@ Screenshots:
 ![image](docs/images/barcode-generator-4.PNG)
 ![image](docs/images/generated-barcode-5.PNG)
 
-
-
-
-
-![](docs/images/001.png)
 
 **QR Code generator using CI/CD Pipeline** 
 
