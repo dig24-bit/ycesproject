@@ -23,11 +23,11 @@ Note : Codes are documented to make it easy to understand
 
 Screenshots:
 
-![image](docs/images/select-QR-or-Barcode-1.png) 
-![image](docs/images/configuration-QR-code-2.png)
-![image](docs/images/final-generated-QR-code-3.png)
-![image](docs/images/barcode-generator-4.png)
-![image](docs/images/generated-barcode-5.png)
+![image](docs/images/select-QR-or-Barcode-1.PNG) 
+![image](docs/images/configuration-QR-code-2.PNG)
+![image](docs/images/final-generated-QR-code-3.PNG)
+![image](docs/images/barcode-generator-4.PNG)
+![image](docs/images/generated-barcode-5.PNG)
 
 
 
