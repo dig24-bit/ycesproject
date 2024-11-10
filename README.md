@@ -23,10 +23,12 @@ Note : Codes are documented to make it easy to understand
 
 Screenshots:
 
-![image](docs/images/1st-url-qr-genarator.png) 
-![image](docs/images/2nd-choose-foreground-blue.png)
-![image](docs/images/3rd-choose-foreground-white.png)
-![image](docs/images/4th-qr-code.png)
+![image](docs/images/select-QR-or-Barcode-1.png) 
+![image](docs/images/configuration-QR-code-2.png)
+![image](docs/images/final-generated-QR-code-3.png)
+![image](docs/images/barcode-generator-4.png)
+![image](docs/images/generated-barcode-5.png)
+
 
 
 
@@ -133,7 +135,7 @@ This image is pulled by the docker swarm. Using this image, created a docker swa
 
 Docker swarm running service (ycesproject) with 2 replicas. 
 
-![](docs/images/010.jpeg)
+![](docs/images/010.JPG)
 
 Containers are distributed across 2 nodes 
 
