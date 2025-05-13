@@ -1,0 +1,8 @@
+---
+- name: Copy app files to Docker Swarm host
+  hosts: docker-swarm-node
+  tasks:
+    - name: Copy files
+      copy:
+        src: ./app/
+        dest: /srv/docker-app/
