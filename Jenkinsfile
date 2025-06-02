@@ -10,8 +10,7 @@ pipeline {
 
         stage('Copy source code to Docker Swarm') {
             steps {
-                sh 'sh 'ansible-playbook -i 15.206.209.207, source-code/Docker/ansible/playbook-to-copy-data-to-docker.yml -u ubuntu'
-'
+                sh  'ansible-playbook -i 15.206.209.207, source-code/Docker/ansible/playbook-to-copy-data-to-docker.yml -u ubuntu'
             }
         }
 
