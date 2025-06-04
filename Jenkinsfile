@@ -22,7 +22,7 @@ pipeline {
 
         stage('Deploying new Service in Docker Swarm') {
             steps {
-                sh 'ansible-playbook -i "13.200.222.125  ," ansible/playbook-for-deployment.yml -u ubuntu'
+                sh'ansible-playbook-i"13.200.222.125,"ansible/playbook-for-deployment.yml-u ubuntu'
             }
         }
     }
