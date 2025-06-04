@@ -10,23 +10,27 @@ pipeline {
 
         stage('Copy source code to Docker Swarm') {
             steps {
-                sh  sh '''
-ansible-playbook -i 3.108.55.248, source-code/Docker/ansible/playbook-to-copy-data-to-docker.yml -u ubuntu --private-key ~/.ssh/your-key.pem
-'''
-'
+                sh '''
+                ansible-playbook -i 13.200.222.125, ycesproject/source-code/Docker/ansible/playbook-to-copy-data-to-docker.yml -u ubuntu --private-key ~/.ssh/your-key.pem
+                '''
             }
         }
 
         stage('Build & Push the new Image to Dockerhub') {
             steps {
-                sh 'ansible-playbook -i "3.108.55.248," ansible/playbook-to-push.yml -u ubuntu'
+                sh '''
+                ansible-playbook -i 13.200.222.125, ycesproject/source-code/Docker/ansible/playbook-to-push.yml -u ubuntu --private-key ~/.ssh/your-key.pem
+                '''
             }
         }
 
         stage('Deploying new Service in Docker Swarm') {
             steps {
-                sh'ansible-playbook-i"3.108.55.248,"ansible/playbook-for-deployment.yml-u ubuntu'
+                sh '''
+                ansible-playbook -i 13.200.222.125, ycesproject/source-code/Docker/ansible/playbook-for-deployment.yml -u ubuntu --private-key ~/.ssh/your-key.pem
+                '''
             }
         }
     }
 }
+
