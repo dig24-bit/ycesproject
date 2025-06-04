@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        REMOTE_HOST = "13.200.222.125"
+        REMOTE_HOST = "3.108.55.248"
         REMOTE_USER = "ubuntu"
     }
 
