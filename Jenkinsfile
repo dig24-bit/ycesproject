@@ -31,7 +31,7 @@ pipeline {
 
         stage('Deploying new Service in Docker Swarm') {
             steps {
-                // ✅ Removed "ycesproject/"/var/lib/jenkins/workspace/<JOB_NAME>/source-code/Docker/ansible/playbook-to-copy-data-to-docker.yml 
+                // "ycesproject/"/var/lib/jenkins/workspace/<JOB_NAME>/source-code/Docker/ansible/playbook-to-copy-data-to-docker.yml 
                 sh '''
                 ansible-playbook -i 13.200.222.125, source-code/Docker/ansible/playbook-for-deployment.yml -u ubuntu --private-key ~/.CICD.pem
                 '''
