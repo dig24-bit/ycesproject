@@ -14,7 +14,7 @@ pipeline {
                 //  "ycesproject/" /var/lib/jenkins/workspace/<JOB_NAME>/source-code/Docker/ansible/playbook-to-copy-data-to-docker.yml
 
                 sh '''
-                ansible-playbook -i 13.201.102.215, source-code/Docker/ansible/playbook-to-copy-data-to-docker.yml -u ubuntu --private-key ~/.ssh/CICD.pem
+                ansible-playbook -i 13.204.77.82, source-code/Docker/ansible/playbook-to-copy-data-to-docker.yml -u ubuntu --private-key ~/.ssh/CICD.pem
                 '''
             }
         }
@@ -24,7 +24,7 @@ pipeline {
                 //  "ycesproject/"/var/lib/jenkins/workspace/<JOB_NAME>/source-code/Docker/ansible/playbook-to-copy-data-to-docker.yml
 
                 sh '''
-                ansible-playbook -i 13.200.222.125, source-code/Docker/ansible/playbook-to-push.yml -u ubuntu --private-key ~/.ssh/CICD.pem
+                ansible-playbook -i 13.204.77.82, source-code/Docker/ansible/playbook-to-push.yml -u ubuntu --private-key ~/.ssh/CICD.pem
                 '''
             }
         }
@@ -33,7 +33,7 @@ pipeline {
             steps {
                 // "ycesproject/"/var/lib/jenkins/workspace/<JOB_NAME>/source-code/Docker/ansible/playbook-to-copy-data-to-docker.yml 
                 sh '''
-                ansible-playbook -i 13.200.222.125, source-code/Docker/ansible/playbook-for-deployment.yml -u ubuntu --private-key ~/.CICD.pem
+                ansible-playbook -i 13.204.77.82, source-code/Docker/ansible/playbook-for-deployment.yml -u ubuntu --private-key ~/.CICD.pem
                 '''
             }
         }
