@@ -6,12 +6,35 @@
       ansible.builtin.git:
         repo: "https://github.com/dig24-bit/ycesproject.git"
         dest: /tmp/ycesproject
-        version: main  # or your specific branch
+        version: main
         clone: yes
         update: yes
 
-    - name: Copy files from repository to Docker target
+    - name: Verify repository contents
+      ansible.builtin.debug:
+        var: lookup('pipe', 'ls -la /tmp/ycesproject/')
+
+    - name: Find files to copy
+      ansible.builtin.find:
+        paths: /tmp/ycesproject
+        file_type: file
+        recurse: yes
+      register: files_to_copy
+
+    - name: Debug files found
+      ansible.builtin.debug:
+        var: files_to_copy.files
+
+    - name: Create target directory
+      ansible.builtin.file:
+        path: /target/path/
+        state: directory
+        mode: '0755'
+
+    - name: Copy all files from repository
       ansible.builtin.copy:
-        src: /tmp/ycesproject/src/  # Adjust path to match your repo structure
-        dest: /target/path/  # Replace with actual Docker volume path
-        remote_src: yes  # Required since files are on the local system
+        src: "{{ item.path }}"
+        dest: "/target/path/{{ item.path | basename }}"
+        remote_src: yes
+      loop: "{{ files_to_copy.files }}"
+      when: files_to_copy.files | length > 0
