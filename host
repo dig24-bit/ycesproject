@@ -1,2 +1,17 @@
-[docker-swarm-node]
-localhost
+---
+- name: Clone repository and copy files to Docker
+  hosts: localhost
+  tasks:
+    - name: Clone GitHub repository
+      ansible.builtin.git:
+        repo: "https://github.com/dig24-bit/ycesproject.git"
+        dest: /tmp/ycesproject
+        version: main  # or your specific branch
+        clone: yes
+        update: yes
+
+    - name: Copy files from repository to Docker target
+      ansible.builtin.copy:
+        src: /tmp/ycesproject/src/  # Adjust path to match your repo structure
+        dest: /target/path/  # Replace with actual Docker volume path
+        remote_src: yes  # Required since files are on the local system
