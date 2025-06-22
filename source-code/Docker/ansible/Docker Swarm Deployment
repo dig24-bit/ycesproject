@@ -4,9 +4,11 @@ pipeline {
     environment {
         REMOTE_HOST = "3.108.55.248"
         REMOTE_USER = "ubuntu"
+        INVENTORY = "${REMOTE_HOST},"
     }
 
     stages {
+
         stage('Clone GitHub Repository') {
             steps {
                 git url: 'https://github.com/dig24-bit/ycesproject.git', branch: 'main'
@@ -16,7 +18,7 @@ pipeline {
         stage('Copy source code to Docker Swarm') {
             steps {
                 sh '''
-                ansible-playbook -i "${REMOTE_HOST}," source-code/Docker/ansible/playbook-to-copy-data-to-docker.yml -u ${REMOTE_USER}
+                ansible-playbook -i "${INVENTORY}" source-code/Docker/ansible/playbook-to-copy-data-to-docker.yml -u ${REMOTE_USER}
                 '''
             }
         }
@@ -24,7 +26,7 @@ pipeline {
         stage('Build & Push the new Image to Dockerhub') {
             steps {
                 sh '''
-                ansible-playbook -i "${REMOTE_HOST}," source-code/Docker/ansible/playbook-to-push.yml -u ${REMOTE_USER}
+                ansible-playbook -i "${INVENTORY}" source-code/Docker/ansible/playbook-to-push.yml -u ${REMOTE_USER}
                 '''
             }
         }
@@ -32,16 +34,26 @@ pipeline {
         stage('Deploying new Service in Docker Swarm') {
             steps {
                 sh '''
-                ansible-playbook -i "${REMOTE_HOST}," source-code/Docker/ansible/playbook-for-deployment.yml -u ${REMOTE_USER}
+                ansible-playbook -i "${INVENTORY}" source-code/Docker/ansible/playbook-for-deployment.yml -u ${REMOTE_USER}
                 '''
             }
         }
+
+        stage('Deploy to Docker Swarm') {
+            steps {
+                script {
+                    sh '''
+                    ssh ${REMOTE_USER}@${REMOTE_HOST} '
+                        docker pull digvijay554/ycesproject:latest &&
+                        (docker service ls | grep ycesproject-service && \
+                            docker service update --image digvijay554/ycesproject:latest ycesproject-service || \
+                            docker service create --with-registry-auth --name ycesproject-service -p 5000:5000 digvijay554/ycesproject:latest)
+                    '
+                    '''
+                }
+            }
+        }
+
     }
 
-    post {
-        failure {
-            echo 'Pipeline failed. Please check the logs.'
-        }
-        success {
-            echo 'Pipeline executed successfully.'
-        }
+
