@@ -27,7 +27,7 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'docker user', passwordVariable: 'DOCKER_PASS')]) {
                     script {
                         sh 'docker tag ycesproject digvijay554/ycesproject:latest'
-                        sh 'echo $DOCKER_PASS | docker login -u digvijay554 --password-stdin''
+                        sh 'echo $DOCKER_PASS | docker login -u digvijay554 --password-stdin'
                         sh 'docker push $DOCKER_USER/$IMAGE_NAME:latest'
                     }
                 }
