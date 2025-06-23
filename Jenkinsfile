@@ -39,7 +39,6 @@ stage('Deploy to Docker Swarm') {
         script {
             sh '''
                 docker pull digvijay554/ycesproject:latest
-
                 /usr/bin/docker service update --image digvijay554/ycesproject:latest ycesproject_web || \
                 /usr/bin/docker service create --name ycesproject_web -p 80:80 digvijay554/ycesproject:latest
             '''
