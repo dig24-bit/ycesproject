@@ -34,16 +34,15 @@ pipeline {
             }
         }
 
-        stage('Deploy to Docker Swarm') {
-            steps {
-                script {
-                    sh '''
-                    'docker pull digvijay554/ycesproject:latest'
-                     /usr/bin/docker service update --image digvijay554/ycesproject:latest ycesproject_web || /usr/bin/docker service create --name ycesproject_web digvijay554/ycesproject:latest
-                    docker service create --name ycesproject_service -p 80:80 $DOCKER_USER/$IMAGE_NAME:latest
-                    '''
-                }
-            }
+stage('Deploy to Docker Swarm') {
+    steps {
+        script {
+            sh '''
+                docker pull digvijay554/ycesproject:latest
+
+                /usr/bin/docker service update --image digvijay554/ycesproject:latest ycesproject_web || \
+                /usr/bin/docker service create --name ycesproject_web -p 80:80 digvijay554/ycesproject:latest
+            '''
         }
     }
 }
