@@ -39,7 +39,7 @@ pipeline {
                 script {
                     sh '''
                     'docker pull digvijay554/ycesproject:latest'
-                    docker service update --image $DOCKER_USER/$IMAGE_NAME:latest ycesproject_service || \
+                     /usr/bin/docker service update --image digvijay554/ycesproject:latest ycesproject_web || /usr/bin/docker service create --name ycesproject_web digvijay554/ycesproject:latest
                     docker service create --name ycesproject_service -p 80:80 $DOCKER_USER/$IMAGE_NAME:latest
                     '''
                 }
