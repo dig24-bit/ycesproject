@@ -38,7 +38,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    docker pull $DOCKER_USER/$IMAGE_NAME:latest
+                    'docker pull digvijay554/ycesproject:latest'
                     docker service update --image $DOCKER_USER/$IMAGE_NAME:latest ycesproject_service || \
                     docker service create --name ycesproject_service -p 80:80 $DOCKER_USER/$IMAGE_NAME:latest
                     '''
