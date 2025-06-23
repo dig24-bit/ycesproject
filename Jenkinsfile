@@ -28,7 +28,7 @@ pipeline {
                     script {
                         sh 'docker tag ycesproject digvijay554/ycesproject:latest'
                         sh 'echo $DOCKER_PASS | docker login -u digvijay554 --password-stdin'
-                        sh 'docker push $DOCKER_USER/$IMAGE_NAME:latest'
+                        sh 'docker push digvijay554/ycesproject:latest'
                     }
                 }
             }
