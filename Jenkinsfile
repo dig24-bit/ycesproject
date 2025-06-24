@@ -15,12 +15,13 @@ pipeline {
         }
 
         stage('Build Docker Image') {
-            steps {
-                script {
-                    sh 'docker build -t $IMAGE_NAME .'
-                }
-            }
-        }
+  steps {
+    script {
+      sh 'docker build -t digvijay554/ycesproject:latest ./source-code'
+    }
+  }
+}
+
 
         stage('Tag and Push Docker Image') {
             steps {
