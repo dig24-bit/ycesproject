@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+       agent { label 'docker-agent-1' }
 
     environment {
         IMAGE_NAME = "ycesproject"
