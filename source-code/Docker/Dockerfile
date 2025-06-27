@@ -3,7 +3,7 @@ WORKDIR /app
 COPY ./*  /app/
 RUN pip uninstall barcode
 RUN pip install -r requirements.txt
-EXPOSE 8083
+EXPOSE 80
 ENTRYPOINT ["python3"]
 CMD ["app.py"]
 
