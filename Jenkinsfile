@@ -38,8 +38,8 @@ pipeline {
                 script {
                     sh """
                         docker pull $DOCKER_USER/$IMAGE_NAME:9.0.0
-                        docker service update --image $DOCKER_USER/$IMAGE_NAME:9.0.0 ycesproject_web || \
-                        docker service create --name ycesproject_web -p 80:80 $DOCKER_USER/$IMAGE_NAME:9.0.0
+                        docker service update --image $DOCKER_USER/$IMAGE_NAME:9.0.4 ycesproject_web || \
+                        docker service create --name ycesproject_web -p 80:80 $DOCKER_USER/$IMAGE_NAME:9.0.4
                     """
                 }
             }
