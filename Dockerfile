@@ -1,19 +1,10 @@
-# Use an official Python image
-FROM python:3.10
+FROM python:3.9-slim
 
-# Set working directory
 WORKDIR /app
 
-# Copy all files
-COPY . .
+COPY . /app
 
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
-# Expose port (optional)
-EXPOSE 80
-
-# Run the app
-CMD CMD ["python", "main.py"]
-
+CMD ["python", "app.py"]
 
