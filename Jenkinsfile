@@ -17,7 +17,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build("${DOCKER_USER}/${IMAGE_NAME}:latest", ".")
+                    docker.build("${DOCKER_USER}/${IMAGE_NAME}:9.0.0", ".")
                 }
             }
         }
@@ -27,7 +27,7 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
                     script {
                         sh "echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin"
-                        sh "docker push $DOCKER_USER/$IMAGE_NAME:latest"
+                        sh "docker push $DOCKER_USER/$IMAGE_NAME:9.0.0"
                     }
                 }
             }
@@ -37,9 +37,9 @@ pipeline {
             steps {
                 script {
                     sh """
-                        docker pull $DOCKER_USER/$IMAGE_NAME:latest
-                        docker service update --image $DOCKER_USER/$IMAGE_NAME:latest ycesproject_web || \
-                        docker service create --name ycesproject_web -p 80:80 $DOCKER_USER/$IMAGE_NAME:latest
+                        docker pull $DOCKER_USER/$IMAGE_NAME:9.0.0
+                        docker service update --image $DOCKER_USER/$IMAGE_NAME:9.0.0 ycesproject_web || \
+                        docker service create --name ycesproject_web -p 80:80 $DOCKER_USER/$IMAGE_NAME:9.0.0
                     """
                 }
             }
